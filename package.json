@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/ga-dc/99_bottles_express#readme",
   "dependencies": {
-    "express": "^4.13.3",
+    "express": "^4.16.2",
     "hbs": "^3.1.0"
   }
 }
