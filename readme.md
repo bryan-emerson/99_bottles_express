@@ -1,27 +1,56 @@
-# 99 Bottles of Beer
+[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-Build an express application that enables users to count down the number
-of bottles of beer.
+# 99 Bottles of Express Beer
+
+Build an application that enables users to count down the numbers of bottles of
+beer.
+
+## Prerequisites
+
+- Node
+- Express
 
 ## Instructions
 
-1. Clone this repository
-2. Change into the new directory
-3. Work through the requirements listed below
+1. Fork and clone this repository.
+1. Change into the new directory.
+1. Fulfill the listed requirements.
 
-You do not need to fork this repository and make a pull request.
+You are required to turn in your submission by making a pull request on the
+original repository. Submissions are due by the time listed on the cohort
+calendar.
 
 ## Requirements
 
-- On the home page (`get "/"`), users should see:
-  - "99 Bottles of beer on the wall"
-  - a link that says "take one down, pass it around"
-  - this should link to `/98`, where the number represents the number of bottles left.
-- When a number is given in the url (`get "/:number_of_bottles"`), users should see:
-  - The number of bottles of beer on the wall (i.e. `98 Bottles of beer on the wall.`)
-  - a link to "take one down, pass it around", where the href is number of bottles in the parameter minus 1.
-- If there are 0 bottles left, do not show a link to "take one down"
-  - Add a link to start over, which directs the user back to the home page.
+- When a users makes a request to the root route (`'/'`), they should get a JSON
+    object back with `'99 bottles of beer on the wall'` and a link to a route
+    to `/98`
+- When a number is given in the url (i.e. `/:number_of_bottles`), users should
+    get a JSON object back with:
+    - `'<number> bottles of beer on the wall'` where `<number>` is the value of `:number_of_bottles` and
+    - A link to the next route (i.e. `<number>` minus 1)
+- If there are 9 bottles left, the user should get a JSON object back with:
+  - `0 bottles of beer on the wall` and,
+  - A link back to the top (i.e. 99 bottles of beer on the wall)
 
-> You may need to do some further research on Handlebars to get it working! See if there's a way to create conditionals in Handlebars.
+A few things to note:
 
+- You should always return a JSON object
+- The properties within your JSON object are up to you. One should be for the
+    message (i.e. `'74 bottles of beer on the wall'`) and the other for the next
+    route (i.e. `localhost:3000/73`)
+
+## Bonus
+
+See if you can figure out how to do all of this with a single route. You'll need
+to research how to make parameters optional.
+
+## Plagiarism
+
+Take a moment to refamiliarize yourself with the [Plagiarism policy](https://git.generalassemb.ly/DC-WDI/Administrative/blob/master/plagiarism.md). Plagiarized work will not be accepted.
+
+## [License](LICENSE)
+
+1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
+1.  All software code is licensed under GNU GPLv3. For commercial use or
+    alternative licensing, please contact legal@ga.co.
