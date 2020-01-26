@@ -29,7 +29,7 @@ calendar.
     get a JSON object back with:
     - `'<number> bottles of beer on the wall'` where `<number>` is the value of `:number_of_bottles` and
     - A link to the next route (i.e. `<number>` minus 1)
-- If there are 9 bottles left, the user should get a JSON object back with:
+- If there are 0 bottles left, the user should get a JSON object back with:
   - `0 bottles of beer on the wall` and,
   - A link back to the top (i.e. 99 bottles of beer on the wall)
 
