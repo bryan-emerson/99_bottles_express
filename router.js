@@ -10,7 +10,7 @@ router.get('/', (request, response)=> {
 router.get('/:bottles', (request, response)=> {
   let bottles = request.params.bottles
   if (bottles > 0) {
-    let data = {numOnWall: bottles, nextLink: `localhost:9000/${bottles - 1}`}
+    let data = {numOnWall: bottles, nextLink: `http://localhost:9000/${bottles - 1}`}
     response.json(data)
   } else {
     let data = {numOnWall: 99, link: 'localhost:9000/98'}
